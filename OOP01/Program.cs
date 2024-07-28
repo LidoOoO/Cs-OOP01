@@ -1,5 +1,17 @@
-﻿namespace OOP01
+﻿using Common;
+
+namespace OOP01
 {
+
+    // What You Can Write Inside Namespace ??
+    // 1. Class
+    // 2. Struct
+    // 3. Interface
+    // 4. Enum
+
+    // Access Modifier Allowed Inside Namespace
+    // 1. Internal [Default]
+    // 2. Public
     internal class Program
     {
 
@@ -79,6 +91,7 @@
 
 
         static void Main()
+
         {
 
             #region Part 01 Exception Handling and Protective Code
@@ -105,7 +118,19 @@
             #endregion
 
 
+            #region Access Modifiers 
 
+            //TypeA obj = new TypeA(); //Valid  
+
+            ////TypeB obj2 = new Common.TypeB(); // Invalid [Internal]
+
+            ////obj.X = 10; //Invalid
+
+            ////obj.Y = 20; // Invalid
+
+            //obj.Z = 30; // valid
+
+            #endregion
 
 
         }
