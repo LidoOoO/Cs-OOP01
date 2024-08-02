@@ -110,7 +110,7 @@ namespace OOP01
 
         public enum Gender : int // Default
         {
-            Male , Female
+            Male = 1 , Female = 2
         }
 
         public enum Roles
@@ -126,11 +126,12 @@ namespace OOP01
 
         #endregion
 
+        
         static void Main()
 
         {
 
-            
+
             #region Part 01 Exception Handling and Protective Code
 
             ////DoSomeCode(); // RunTime Errors  (Exceptions)
@@ -200,17 +201,46 @@ namespace OOP01
 
             ////Grade X = (Grade)Enum.Parse(typeof(Grade), Console.ReadLine() );
 
-             
+
             //bool Result  = Enum.TryParse(typeof(Grade), Console.ReadLine(), out object X);
             //Console.WriteLine($"Result is {Result}");
             //Console.WriteLine($"Your Grade is {X}");
-            
+
             #endregion
 
             #endregion
+
+            #region Part 04 Enum - Example 02 multilabel - case sensitivity [TryParse]
+
+            //Gender G1 = Gender.Female;
+
+            //Console.WriteLine(G1);
+
+            //Gender G2 = (Gender)1;
+            //Console.WriteLine(G2); // Female
+
+            //string Gender = "male";
+
+            //Gender X = (Gender)Gender;
+
+            //Enum.TryParse(typeof(Gender), Gender, out object Result);
+
+            //bool Flag = Enum.TryParse<Gender>(Gender, true , out Gender Result);
+
+            //Console.WriteLine(Flag);
+            //Console.WriteLine(Result);
+
+
+            //Gender X = new Gender(); //Take Default Value Of Enum = 0
+
+            //Console.WriteLine(X);
+
+
+            #endregion
+
 
         }
-
+ 
 
         //class Employee
         //{
