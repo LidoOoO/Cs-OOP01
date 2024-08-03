@@ -126,9 +126,29 @@ namespace OOP01
 
         #endregion
 
-        
-        static void Main()
+        #region Part 05 Enum - Example 03 (Permissions)
 
+
+        [Flags]
+        public enum Permissions : byte
+        {
+            Delete = 1 , Execute = 2 , Read  = 4 , Write = 8
+        }
+
+        #endregion
+
+
+        class Employee
+        {
+            public string Name;
+            public int Age;
+            public Gender Gender;
+            public decimal Salary;
+            public Permissions Permissions;
+        }
+
+        static void Main()
+                
         {
 
 
@@ -238,9 +258,65 @@ namespace OOP01
 
             #endregion
 
+            #region Part 05 Enum - Example 03 (Permissions)
 
+            //Employee employee = new Employee();
+            //employee.Name = "Waleed";
+            //employee.Gender = Gender.Male;
+            //employee.Permissions = (Permissions)3;
+
+
+            //Console.WriteLine(employee.Permissions); // Delete , Excute
+
+            //// If you Want To Add Permission (Read)
+            //// Do XOR Operatoin 
+
+            //// |
+            //// &
+            //// ^
+
+            //employee.Permissions = employee.Permissions ^ Permissions.Read; // Delete , Excute , Read
+
+            //Console.WriteLine(employee.Permissions); 
+
+            ////If You Want To Remove [Deny] Permission (Read)
+            ////Do XOR Operatoin 
+
+            //employee.Permissions = employee.Permissions ^ Permissions.Read; 
+
+            //Console.WriteLine(employee.Permissions); // Delete , Excute
+
+
+            //employee.Permissions = employee.Permissions ^ Permissions.Delete;
+
+            //Console.WriteLine(employee.Permissions); // Excute
+
+            ////If You Want To Check If Delete Is Existed Or Not
+            //// Do And Operation
+            //// &
+
+            ////employee.Permissions & Permissions.Delete;
+            //// If Delete is Existed => Return Delete 
+            //// If Delete is Not Existed => Return Random Value 
+            
+            //if((employee.Permissions & Permissions.Delete) == Permissions.Delete)
+            //{
+            //    Console.WriteLine("Delete Is Existed");
+            //}
+
+            //else
+            //{
+            //    Console.WriteLine("Delete Is Not Existed");
+            //    employee.Permissions = employee.Permissions ^ Permissions.Delete;
+            //    Console.WriteLine(employee.Permissions);
+            //}
+
+
+            //employee.Permissions = employee.Permissions | Permissions.Read;
+
+            #endregion
         }
- 
+
 
         //class Employee
         //{
