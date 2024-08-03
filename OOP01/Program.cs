@@ -175,7 +175,6 @@ namespace OOP01
 
             #endregion
 
-
             #region Part 02 Access Modifiers 
 
             //TypeA obj = new TypeA(); //Valid  
@@ -298,7 +297,7 @@ namespace OOP01
             ////employee.Permissions & Permissions.Delete;
             //// If Delete is Existed => Return Delete 
             //// If Delete is Not Existed => Return Random Value 
-            
+
             //if((employee.Permissions & Permissions.Delete) == Permissions.Delete)
             //{
             //    Console.WriteLine("Delete Is Existed");
@@ -314,6 +313,34 @@ namespace OOP01
 
             //employee.Permissions = employee.Permissions | Permissions.Read;
 
+            #endregion
+
+            #region Part 06 Struct
+
+            //Point P1;
+
+
+            ////Console.WriteLine(P1.X); // Invalid
+
+            ////P1.X = 10;
+            ////P1.Y = 20;
+            ////Console.WriteLine(P1.X);
+            ////Console.WriteLine(P1.Y);
+
+            //P1 = new Point(1 , 2);
+            ////New => Is Just Only For Constructor Selectoin
+            ////That Will Initialize Attributes Of Struct
+
+            ////Console.WriteLine($" X = => {P1.X}");
+            ////Console.WriteLine($" Y = => {P1.Y}");
+            //Console.WriteLine(P1); // (1 , 2)
+            //Console.WriteLine(P1.ToString()); // (1 , 2)
+
+
+            //Point P2 = new();
+
+            //Console.WriteLine(P2.X);
+            //Console.WriteLine(P2.Y);
             #endregion
         }
 
